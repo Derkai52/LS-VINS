@@ -91,7 +91,9 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 
         cv::imshow("desc", desc);
         cv::imshow("score", score);
-        cv::imshow("LetNet Infer Result", frame);
+        cv::Mat new_desc = desc.clone();
+        tracker.update(score, new_desc);
+        tracker.show(frame);
         cv::waitKey(1);
 
     }

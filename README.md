@@ -20,7 +20,14 @@ sudo make install
 
 ## 使用
 ```bash
+# 下载和编译
+git clone https://github.com/Derkai52/LS-VINS.git
+cd LS-VINS
+catkin_make
+
 # 将使用 RealSense D430 左目进行推理（realsense配置文件需要参考launch的路径自己写一下）
 roslaunch letnet realsense_d430_run.launch
 
 ```
+
+![demo.jpg](./demo.jpg)
