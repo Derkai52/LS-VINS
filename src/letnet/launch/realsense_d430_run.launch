@@ -1,0 +1,9 @@
+<launch>
+    <node name="letnet" pkg="letnet" type="letnet" output="screen">    
+        <param name="model_param_path" value="letnet.param" />
+        <param name="model_path" value="letnet.bin" />
+    </node>
+
+	<include file="$(find realsense2_camera)/launch/rs_d430_camera.launch"></include>
+
+</launch> 
